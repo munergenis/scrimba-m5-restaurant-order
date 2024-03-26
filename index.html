@@ -23,6 +23,35 @@
 
       <main>
         <section class="articles container" id="articles"></section>
+        <section class="order container">
+          <h2>Your order</h2>
+          <button class="order-visibility-btn" id="order-visibility-btn">
+            ↕️
+          </button>
+          <div class="products-order" id="products-order">
+            <div class="product-order">
+              <h2>Pizza</h2>
+              <button class="remove-btn" data-remove="product-uuid">
+                remove
+              </button>
+              <p class="price">$14</p>
+            </div>
+            <div class="product-order">
+              <h2>Beer</h2>
+              <button class="remove-btn" data-remove="product-uuid">
+                remove
+              </button>
+              <p class="price">$12</p>
+            </div>
+          </div>
+          <div class="total-price">
+            <h2>Total price:</h2>
+            <p class="price">$26</p>
+          </div>
+          <button class="complete-order-btn" id="complete-order-btn">
+            Complete order
+          </button>
+        </section>
       </main>
     </div>
     <script type="module" src="./js/script.js"></script>

@@ -2,6 +2,11 @@ import { menuArray } from "/data/data.js"
 
 renderMenu()
 
+document.addEventListener("click", (e) => {
+  e.target.dataset.add && handleAddClick(e.target.dataset.add)
+  e.target.id === "order-visibility-btn" && toggleOrderVisibility()
+})
+
 function renderMenu() {
   const articlesEl = document.querySelector("#articles")
   const menuHTML = getMenuHTML()
@@ -18,7 +23,7 @@ function getMenuHTML() {
         <img class="product-img" src="${image}" alt="${name}" />
         <div class="product-details">
           <h2>${name}</h2>
-          <p>${ingredients.join(", ")}</p>
+          <p>${ingredientsList}</p>
           <p class="price">$${price}</p>
         </div>
         <button class="add-product-btn" data-add="${id}">+</button>
@@ -30,8 +35,17 @@ function getMenuHTML() {
 }
 
 function formatIngredientsList(ingredientsArr) {
-  const formatter = new Intl.listFormat("en", {
-    style: "short",
+  const formatter = new Intl.ListFormat("en-gb", {
+    style: "long",
     type: "conjunction",
   })
+  return formatter.format(ingredientsArr)
+}
+
+function handleAddClick(productID) {
+  console.log(productID)
+}
+
+function toggleOrderVisibility() {
+  document.querySelector("#products-order").classList.toggle("hidden")
 }
