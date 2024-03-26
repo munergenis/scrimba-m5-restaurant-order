@@ -154,7 +154,7 @@ header {
   flex-direction: column;
   align-items: center;
   bottom: 0;
-  background-color: #c6c6c6d6;
+  background-color: #c6c6c6ea;
 }
 
 .products-order,
@@ -172,6 +172,10 @@ header {
 .product-order .price,
 .total-price .price {
   margin-left: auto;
+}
+
+.product-order-title {
+  width: 60px;
 }
 
 .total-price {
