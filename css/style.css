@@ -165,17 +165,18 @@ header {
 .product-order,
 .total-price {
   display: flex;
+  justify-content: end;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.product-order .price,
-.total-price .price {
-  margin-left: auto;
+.product-order-title,
+.total-price-title {
+  margin-right: auto;
 }
 
-.product-order-title {
-  width: 60px;
+.product-order > .price {
+  margin-left: 10px;
 }
 
 .total-price {
