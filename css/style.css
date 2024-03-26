@@ -99,6 +99,27 @@ button {
   transition: none;
 }
 
+.pay-btn {
+  padding-block: 15px;
+  font-size: 16px;
+  border: 1.5px solid gray;
+  border-radius: 3px;
+  background-color: gray;
+  color: whitesmoke;
+  transition: all ease 0.15s;
+}
+
+.pay-btn:hover {
+  background-color: lightgray;
+  color: darkslategray;
+}
+
+.pay-btn:active {
+  background-color: whitesmoke;
+  color: darkslategray;
+  transition: none;
+}
+
 /*____ Layout ____*/
 .body-container {
   max-width: 600px;
@@ -181,6 +202,53 @@ header {
 
 .total-price {
   border-top: 1px solid black;
+}
+
+.modal {
+  background-color: white;
+  width: 320px;
+  height: 340px;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 50px 25px;
+  box-shadow: 0 0 100px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 15px;
+  text-align: center;
+}
+
+.modal-h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslategray;
+}
+
+.modal-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-inputs > input {
+  height: 35px;
+  padding-inline: 15px;
+  border: 1.5px solid gray;
+  border-radius: 3px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.completed-container {
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+  padding-block: 20px;
+  margin-top: 25px;
+}
+
+.completed-p {
+  font-size: 22px;
 }
 
 /*____ Utility ____*/

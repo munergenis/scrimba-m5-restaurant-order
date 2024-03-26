@@ -15,6 +15,10 @@ document.addEventListener("click", (e) => {
     toggleOrderVisibility()
   } else if (e.target.dataset.remove) {
     handleRemoveClick(e.target.dataset.remove)
+  } else if (e.target.id === "complete-order-btn") {
+    checkoutOrder()
+  } else if (e.target.id === "pay-btn") {
+    completeOrder()
   }
 })
 
@@ -99,8 +103,25 @@ function handleRemoveClick(productIndex) {
   renderTotalPrice()
 }
 
+function checkoutOrder() {
+  showPayModal()
+}
+
+function completeOrder() {
+  document.querySelector("#main").innerHTML = `
+    <div class="container completed-container">
+      <p class="completed-p">Thank you! Your order is on the way!</p>
+    </div>
+  `
+  document.querySelector("#modal").classList.add("hidden")
+}
+
 function toggleOrderVisibility() {
   document.querySelector("#products-order").classList.toggle("hidden")
+}
+
+function showPayModal() {
+  document.querySelector("#modal").classList.remove("hidden")
 }
 
 function formatIngredientsList(ingredientsArr) {

@@ -14,6 +14,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
     <div class="body-container">
       <header class="container">
@@ -21,28 +22,18 @@
         <p class="header-text">The best burgers and pizzas in town.</p>
       </header>
 
-      <main>
-        <section class="articles container" id="articles"></section>
+      <main id="main">
+        <section class="articles container" id="articles">
+          <!-- Product Menu -->
+        </section>
+
         <section class="order container">
           <h2>Your order</h2>
           <button class="order-visibility-btn" id="order-visibility-btn">
             ↕️
           </button>
           <div class="products-order" id="products-order">
-            <!-- <div class="product-order">
-              <h2 class="product-order-title">Pizza</h2>
-              <button class="remove-btn" data-remove="product-uuid">
-                remove
-              </button>
-              <p class="price">$14</p>
-            </div>
-            <div class="product-order">
-              <h2 class="product-order-title">Beer</h2>
-              <button class="remove-btn" data-remove="product-uuid">
-                remove
-              </button>
-              <p class="price">$12</p>
-            </div> -->
+            <!-- Order Products -->
           </div>
           <div class="total-price">
             <h2 class="total-price-title">Total price:</h2>
@@ -53,6 +44,27 @@
           </button>
         </section>
       </main>
+      <div class="modal hidden" id="modal">
+        <h2 class="modal-h2">Enter card details</h2>
+        <div class="modal-inputs">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter card number"
+            required
+          />
+          <input type="text" name="" id="" placeholder="Enter CVV" required />
+        </div>
+        <button class="pay-btn" id="pay-btn">Pay</button>
+      </div>
     </div>
     <script type="module" src="./js/script.js"></script>
   </body>
